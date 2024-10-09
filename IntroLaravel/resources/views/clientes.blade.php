@@ -1,5 +1,7 @@
 @extends('layouts.plantilla')
 
+@section('titulo','Clientes')
+
 @section('contenido')
   <div class="container mt-5 col-md-8">
     <div class="card text-justify font-monospace">

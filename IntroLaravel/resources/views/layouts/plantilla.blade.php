@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="{{ asset('css/fondo.css') }}">
     @vite(['resources/js/app.js'])
     
-    <title>Document</title>
+    <title>@yield('titulo')</title>
 </head>
 <body>
     <!--Inicia Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a href=" {{ route('rutaInicio') }}" class="navbar-brand">Turista sin Hops</a>
+            <a href=" {{ route('rutaInicio') }}" class="navbar-brand">Turista sin Maps</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

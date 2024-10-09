@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+@section('titulo','Bienvenido Turista')
     <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
         <h1 class="display-1">Bienvenido Turista!</h1>
         <p>Presiona el botón para iniciar...</p>
