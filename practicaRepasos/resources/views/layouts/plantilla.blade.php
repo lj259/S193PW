@@ -9,8 +9,6 @@
 </head>
 <body>
     <div class="d-flex flex-column m-4">
-    <img src="{{asset('images\Logo_upq.png')}}" alt="Logo UPQ" class="img-fluid rounded m-auto d-block m-4 p-2">
- 
     @yield('contenido')
     </div>
 </body>
