@@ -1,6 +1,7 @@
 @extends('layouts.plantilla')
 @section('titulo','Portada')
 @section('contenido')
+@csrf
 <img src="{{asset('images\Logo_upq.png')}}" alt="Logo UPQ" class="img-fluid rounded m-auto d-block m-4 p-2">
  
 <div class="d-flex justify-content-center">

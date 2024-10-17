@@ -12,5 +12,6 @@ class ControladorVistas extends Controller
     public function Repaso1(){
         return view('repaso1');
     }
+    
         //
 }
