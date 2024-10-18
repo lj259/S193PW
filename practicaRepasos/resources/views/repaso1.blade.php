@@ -27,7 +27,7 @@
 <form action="{{route('rutaGT')}}" method="POST">@csrf
 
     <div class="mb-3">
-        <label class="form-label">MB a GB</label>
+        <label class="form-label">GB a TB</label>
         <input type="number" class="form-control" name="numero" placeholder="Introduce un numero a Convertir de GB a TB">
     </div>
         <h1>Resultado: {{$conversionGT ?? '0'}}</h1>
@@ -37,7 +37,7 @@
 <form action="{{route('rutaTG')}}" method="POST">@csrf
 
     <div class="mb-3">
-        <label class="form-label">MB a GB</label>
+        <label class="form-label">TB a GB</label>
         <input type="number" class="form-control" name="numero" placeholder="Introduce un numero a Convertir de TB a GB">
     </div>
         <h1>Resultado: {{$conversionTG ?? '0'}}</h1>
