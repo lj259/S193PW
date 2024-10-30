@@ -12,8 +12,8 @@
         <h5 class="fw-bold">ivan.guerrae@hot.com</h5>
         <p class="card-text fw-lighter">4422830365</p>
       </div>
-      <button type="submit" class="btn btn-warning btn-sm">Actualizar</button>
-      <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+      <button type="submit" class="btn btn-warning btn-sm">{{__('Actualizar')}}</button>
+      <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}}</button>
     </div>
   </div>
 </body>

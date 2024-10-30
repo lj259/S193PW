@@ -17,10 +17,10 @@
 <body>
 @section('titulo','Bienvenido Turista')
     <div class="d-flex flex-column justify-content-center align-items-center text-center full-height">
-        <h1 class="display-1">Bienvenido Turista!</h1>
-        <p>Presiona el botón para iniciar...</p>
-        <a href="/form"  class="btn btn-primary">Ir al Registro</a>
-        <a href="{{ route('rutaForm') }}" class="btn btn-danger">Ir al Registro</a>
+        <h1 class="display-1">{{__('Bienvenido Turista!')}}</h1>
+        <p>{{__('Presiona el botón para iniciar...')}}</p>
+        <a href="/form"  class="btn btn-primary">{{__('Ir al Registro')}}</a>
+        <a href="{{ route('rutaForm') }}" class="btn btn-danger">{{__('Ir al Registro')}}</a>
     </div>
 </body>
 </html>
