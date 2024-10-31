@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @vite(['resources\js\app.js'])
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
