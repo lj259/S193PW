@@ -22,7 +22,7 @@
         </li>
       </ul>
       <span class="navbar-text">
-        Navbar text with an inline element
+        Biblioteca la Oaxaqueña
       </span>
     </div>
   </div>
