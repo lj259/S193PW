@@ -27,7 +27,7 @@
     {{__('Otras noticias literarias Además de la noticia de Han Kang, hay otras noticias literarias interesantes que se han publicado recientemente.')}}
   </p>
   <p class="card-text">
-    {{('Por ejemplo, el escritor Emiliano Monge ha publicado una nueva novela llamada \'Los vivos\', que presenta un mundo liminal donde desaparecidos y aparecidos coexisten.')}}
+    {{__('Por ejemplo, el escritor Emiliano Monge ha publicado una nueva novela llamada \'Los vivos\', que presenta un mundo liminal donde desaparecidos y aparecidos coexisten.')}}
   </p>
   <p class="card-text">
     {{__('También se ha anunciado que la nueva novela de la saga \'The Witcher\' se publicará antes de fin de año.')}}
