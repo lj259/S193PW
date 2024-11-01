@@ -33,9 +33,9 @@
 <footer class="bg-dark text-white text-center text-lg-start mt-auto">
       <div class="text-center p-3">
           <div class="container">
-              <span>&copy; {{ date('Y') }} {{__('Biblioteca la Oaxaqueña')}}. {{__('Todos los derechos reservados')}}.</span>
+              <span>&copy; 2024 {{__('Biblioteca la Oaxaqueña')}}. {{__('Todos los derechos reservados')}}.</span>
               <br>
-              <small>{{ date('d') }} de {{ date('F') }} del {{ date('Y') }}</small>
+              <small>{{__('31 de Octubre del 2024')}}</small>
           </div>
       </div>
   </footer>
