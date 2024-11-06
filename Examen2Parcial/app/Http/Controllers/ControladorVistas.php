@@ -11,8 +11,11 @@ class ControladorVistas extends Controller
         return view('RegistroPrenda');
     }
     public function RegistrarPrenda(ValidarPrenda $Peticion){
-        $Registro = $Peticion->input('Prenda');
-        session()->flash('EXITO','Se ha registrado exitosamente: ' .$Registro);
+        $Prenda = $Peticion->input('Prenda');
+        $color = $Peticion->input('Color');
+        $espacio = " ";
+        $resultado = $Prenda.$espacio.$color;
+        session()->flash('EXITO', 'Se ha guardado exitosamente: ' .$resultado);
         return to_route('Principal');
     }
 }
