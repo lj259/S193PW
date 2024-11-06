@@ -9,7 +9,7 @@
         icon: "success"
         });
     </script>
-    @endsession
+@endsession
 <div class="container-fluid d-flex justify-content-center align-items-center">
 
     <form action="/GuardarLibro" method="POST" class="w-50">
@@ -18,12 +18,13 @@
             <label class="form-label text-center">{{__('ISBN')}}</label>
             <input type="number" class="form-control" name="Isbn" value="{{old('Isbn')}}">
             <small class="text-danger fst-italic">{{$errors->first('Isbn')}}</small>
-        </div>
+        </div>()
         <div class="mb-3 text-center">
             <label class="form-label">{{__('Titulo')}}</label>
             <input type="text" class="form-control" name="Titulo" value="{{old('Titulo')}}" >
             <small class="text-danger fst-italic">{{$errors->first('Titulo')}}</small>
         </div>
+        <p>Algo</p>
         <div class="mb-3 text-center">
             <label class="form-label">{{__('Autor')}}</label>
             <input type="text" class="form-control" name="Autor" value="{{old('Autor')}}" >
