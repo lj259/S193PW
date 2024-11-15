@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\ValidadorCliente;
 
 class ControladorVistas extends Controller
 {
@@ -13,7 +12,6 @@ class ControladorVistas extends Controller
     }
     
     public function consulta(){
-        return view('clientes');
         
     }
     // public function ProcesarCliente(Request $peticion){
@@ -23,7 +21,7 @@ class ControladorVistas extends Controller
     //     return $peticion ->ip(); 
     //     // return $peticion ->all();
     // }
-    public function ProcesarCliente(ValidadorCliente $peticion){
+   /*  public function ProcesarCliente(ValidadorCliente $peticion){
         //Redireccion usando l ruta
         // return redirect('/'); 
         //Redireccion usando el nombre de la ruta
@@ -42,7 +40,7 @@ class ControladorVistas extends Controller
         $usuario = $peticion->input('txtnombre');
         session()->flash('Exito','Se guardo el usuario: '.$usuario);
         return to_route('rutaForm');
-    }
+    } */
 
     
 }

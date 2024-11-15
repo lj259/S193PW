@@ -23,15 +23,13 @@ Route::view('/consultar','clientes')->name('rutaClientes');*/
 /*
 Rutas para Controlador Vistas
 */
-Route::view('/component','componentes')->name('rutaComponent'); 
-
 Route::get('/',[ControladorVistas::class,'home']) ->name('rutaInicio');
-
-Route::get('/consultar',[ControladorVistas::class,'consulta']) ->name('rutaClientes');
-
-Route::post('/enviarCliente',[ControladorVistas::class,'ProcesarCliente']) ->name('rutaProcesar');
 
 /*
 Rutas para clienteControler
 */
 Route::get('/cliente/create',[clienteController::class,'create']) ->name('rutaForm');
+
+Route::post('/cliente',[clienteController::class,'store']) ->name('rutaEnviar');
+// Se puede tener 2 veces el mismo nombre, pero no pueden ser por el mismo metodo, uno puede ser POST y el otro GET
+Route::get('/cliente',[clienteController::class,'index']) ->name('rutaClientes');
