@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 
+
 class clienteController extends Controller
 {
     /**
@@ -58,7 +59,8 @@ class clienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $registro = DB::table('clientes')->find($id);
+        return view('edicion',compact('registro'));
     }
 
     /**
