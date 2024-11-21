@@ -25,11 +25,11 @@
     @endsession
     <div class="card font-monospace">
         <div class="card-header fs-5 text-center text-primary">
-            {{ __('Registro de Clientes') }}
+            {{ __('Actualizar de Registro') }}
         </div>
         @foreach($registro as $cliente)
         <div class="card-body text-justify">
-            <form action="{{route('rutaEnviar')}}" method="POST">
+            <form action="{{route('FormEditar',[$cliente->id])}}" method="POST" id="Edicion_registro">
                 @csrf
                 <div class="mb-3">
                     <label for="nombre" class="form-label">{{__('Nombre')}}:</label>
@@ -52,7 +52,7 @@
                     <small class="text-danger fst-italic">{{$errors->first('txttelefono')}}</small>
                 </div>
                 <div class="d-grid gap-2 mt-2 mb-1">
-                    <button type="submit" class="btn btn-success btn-sm">{{ __('Guardar Cliente')}}</button>
+                    <button id="Edicion" type="submit" class="btn btn-success btn-sm">{{ __('Actualizar Cliente')}}</button>
                 </div>
             </form>
         </div>
@@ -60,4 +60,23 @@
         <div class="card-footer text-muted"></div>
     </div>
 </div>
+
+<script>
+document.getElementById('Edicion').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    Swal.fire({
+        title: '¿Seguro que desea actualizar el registro?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: '¡Sí, actualizar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById('Edicion_registro').submit(); 
+        }
+    });
+});
+</script>
 @endsection

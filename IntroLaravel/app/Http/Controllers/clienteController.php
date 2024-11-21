@@ -59,16 +59,24 @@ class clienteController extends Controller
      */
     public function edit(string $id)
     {
-        $registro = DB::table('clientes')->find($id);
+        $registro = DB::select('select * from clientes where id ='.$id.'');
         return view('edicion',compact('registro'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ValidadorCliente $request, string $id)
     {
-        //
+        DB::table('clientes')->whereId($id)->update([
+            "nombre" => $request->input('txtnombre'),
+            "apellido" => $request->input('txtapellido'),
+            "correo" => $request->input('txtcorreo'),
+            "telefono" => $request->input('txttelefono'),
+        ]);
+        $usuario = $request->input('txtnombre');
+        session()->flash('Exito','Se edito el usuario: '.$usuario);
+        return to_route('rutaClientes');
     }
 
     /**
@@ -76,6 +84,10 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $registro = DB::select('select nombre from clientes where id ='.$id.'');
+        $nombre = $registro[0]->nombre;
+        DB::table('clientes')->delete($id);
+        session()->flash('Exito','Se elimino al usuario: '.$nombre);
+        return to_route('rutaClientes');
     }
 }

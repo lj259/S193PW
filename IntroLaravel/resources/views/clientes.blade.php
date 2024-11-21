@@ -4,7 +4,15 @@
 
 @section('contenido')
 
-
+@session('Exito')
+    <script>
+        Swal.fire({
+        title: "Respuesta del Servidor!",
+        text: '{{$value}}',
+        icon: "success"
+        });
+    </script>
+@endsession
   <div class="container mt-5 col-md-8">
 
     @foreach($consultaClientes as $cliente)
@@ -19,15 +27,37 @@
       </div>
       <div class="card-footer text-muted">
           <a href="{{route('FormEditEnviar',[$cliente->id])}}" class="btn btn-warning btn-sm">{{__('Actualizar')}}</a>
-          <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}}</button>
+      <form action="{{route('FormEliminar',[$cliente->id])}}" 
+      method="POST" 
+      id="Eliminar_cliente_{{$cliente->id}}" 
+      class="my-2">
+      @csrf
+      <button type="button" class="btn btn-danger btn-sm" 
+      onclick='confirmarEliminacion({{$cliente->id}})'>
+      {{__('Eliminar')}}
+    </button>
+    </form>
         </div>
       </div>
-      
-    
-        
+              
   @endforeach
 </div>
+<script>
+function confirmarEliminacion(clienteId) {
+    Swal.fire({
+        title: '¿Seguro que desea eliminar el registro?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: '¡Sí, eliminar!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById(`Eliminar_cliente_${clienteId}`).submit(); 
+        }
+    });
+}
 
-</body>
-</html>
+</script>
 @endsection

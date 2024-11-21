@@ -30,12 +30,18 @@ Rutas para clienteControler
 */
 Route::get('/cliente/create',[clienteController::class,'create']) ->name('rutaForm');
 
+Route::get('/cliente',[clienteController::class,'index']) ->name('rutaClientes');
 Route::post('/cliente',[clienteController::class,'store']) ->name('rutaEnviar');
 // Se puede tener 2 veces el mismo nombre, pero no pueden ser por el mismo metodo, uno puede ser POST y el otro GET
-Route::get('/cliente',[clienteController::class,'index']) ->name('rutaClientes');
 
 /*
 Rutas para edicion de clientes
 */
 
-Route::get('/cliente/edit/{$id}',[clienteController::class,'edit']) ->name('FormEditEnviar');
+Route::get('/cliente/edit/{id}',[clienteController::class,'edit']) ->name('FormEditEnviar');
+Route::post('/cliente/edit/{id}',[clienteController::class,'update']) ->name('FormEditar');
+
+/*
+Ruta eliminacion 
+*/
+Route::post('/cliente/eliminacion/{id}',[clienteController::class,'destroy']) ->name('FormEliminar');
