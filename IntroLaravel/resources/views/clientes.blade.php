@@ -32,8 +32,7 @@
       id="Eliminar_cliente_{{$cliente->id}}" 
       class="my-2">
       @csrf
-      <button type="button" class="btn btn-danger btn-sm" 
-      onclick='confirmarEliminacion({{$cliente->id}})'>
+      <button type="button" class="btn btn-danger btn-sm" onclick='confirmarEliminacion({{$cliente->id}})'>
       {{__('Eliminar')}}
     </button>
     </form>
